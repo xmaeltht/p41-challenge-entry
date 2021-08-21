@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microservice-deployment
+  labels:
+    app: microservice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: microservice
+  template:
+    metadata:
+      labels:
+        app: microservice
+    spec:
+      containers:
+      - name: microservice-pod
+        image: xmaeltht/entry-level-challenge-p41:latest
+        ports: 
+            - containerPort: 80
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-service
+spec:
+  type: NodePort
+  selector:
+    app: microservice
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
