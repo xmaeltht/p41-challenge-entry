@@ -49,7 +49,7 @@ There is a few dependencies that need to be install in order to complet this cha
 
 After all the dependencies are install make sure docker and kubernetes are running fine by running these commands:
 
-    * docker info 
+    $ docker info 
 output:
 ```
     Client:
@@ -72,7 +72,7 @@ Server:
   127.0.0.0/8
  Live Restore Enabled: false
  ```
-    * kubectl get node
+    $ kubectl get node
 output:
 ```
 NAME             STATUS   ROLES                  AGE   VERSION
