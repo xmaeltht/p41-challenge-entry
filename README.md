@@ -50,7 +50,7 @@ There is a few dependencies that need to be install in order to complet this cha
 After all the dependencies are install make sure docker and kubernetes are running fine by running these commands:
 
     $ docker info 
-output:
+**output:**
 ```
     Client:
  Context:    default
@@ -73,16 +73,18 @@ Server:
  Live Restore Enabled: false
  ```
     $ kubectl get node
-output:
+**output:**
 ```
 NAME             STATUS   ROLES                  AGE   VERSION
 docker-desktop   Ready    control-plane,master   49m   v1.21.2
 ```
-```
-NOTE: for linux user the will need to start their chose kubenetes distribution after they install it
 
-For example:    minikube start
-```
+**NOTE:** for linux user the will need to start their chose kubenetes distribution after they install it
+
+For example:    
+    
+    minikube start
+
 
 ## Quick Start
 
@@ -95,17 +97,18 @@ Once all the above tools are set up correctly you are ready to Deploy your micro
     $ kubectl aapply -f microservice.yml
 
     $ kubectl get svc | grep microservice 
-output:
+
+**output:**
 ```
     microservice-service   NodePort    10.96.129.38   <none>        80:32229/TCP   60m
 ```
 
 If you are on docker-desktop got to your browser and you can access your microservice to 
 
-```
-            localhost:<port assign by docker-destop to your service deploymemt>
-            example: localhost:32229
-```
+    localhost:<port assign by docker-destop to your service deploymemt>
+    example: 
+        localhost:32229
+
 
 ### Cleaning Up
 To clean up you just need to run
