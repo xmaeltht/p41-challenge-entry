@@ -14,4 +14,4 @@ docker push $PREFIX:$TAG
 
 #Running the image
 echo "Running image"
-docker run --rm -p 80:80 $PREFIX:$TAG
+docker run --rm -p 80:80 $PREFIX:$TAG 

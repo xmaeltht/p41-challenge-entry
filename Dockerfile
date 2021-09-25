@@ -8,4 +8,4 @@ RUN chmod -R a+w /var/cache/nginx/ \
 COPY myfile.conf /etc/nginx/conf.d/
 EXPOSE 80
 USER nginx
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["nginx", "-g", "daemon off;"] 
