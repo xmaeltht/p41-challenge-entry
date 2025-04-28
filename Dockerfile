@@ -1,4 +1,4 @@
-FROM nginx:1.16.1-alpine
+FROM nginx:1.28.0-alpine
 
 RUN chmod -R a+w /var/cache/nginx/ \
         && touch /var/run/nginx.pid \
